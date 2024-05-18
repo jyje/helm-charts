@@ -1,0 +1,32 @@
+apiVersion: v2
+name: argo-cd-stack
+description: A Helm chart for Argo CD stack
+type: application
+appVersion: v2.11.0
+version: 0.0.1
+home: https://jyje.github.io/helm-charts
+kubeVersion: ^1.25.0-0
+
+sources:
+  - https://github.com/argoproj/argo-cd
+  - https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
+  - https://github.com/jyje/helm-charts
+icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
+
+dependencies:
+- condition: argo-cd.enabled
+  name: argo-cd
+  repository: "https://argoproj.github.io/argo-helm"
+  version: 6.9.3
+- condition: argocd-apps.enabled
+  name: argocd-apps
+  repository: "https://argoproj.github.io/argo-helm"
+  version: 2.0.0
+- condition: argocd-image-updater.enabled
+  name: argocd-image-updater
+  repository: "https://argoproj.github.io/argo-helm"
+  version: 0.9.7
+
+maintainers:
+  - name: jyje
+    email: jyjeon@outlook.com
