@@ -7,6 +7,18 @@ Three Argo CD components are installed in this stack:
 
 The release name should be `argocd`. There is a mismatch between the names `argocd` and `argo-cd`, which is causing ambiguity. So we override the `fullnameOverride` for the Argo CD Helm Chart to `argocd`.
 
+## How to install
+
+```bash
+helm repo add jyje https://jyje.github.io/helm-charts/charts
+helm repo update
+
+helm upgrade --install \
+    --namespace argocd --create-namespace \
+    argocd jyje/argo-cd-stack
+```
+
+
 
 ## Parameters
 
