@@ -1,4 +1,6 @@
-# Helm Charts by jyje
+# jyje/helm-charts
+
+## Helm Charts by jyje
 
 This repository contains useful Helm Charts for Kubernetes curated by jyje.
 
@@ -9,4 +11,4 @@ helm repo update
 
 ## Charts
 
-- [argo-cd-stack](charts/argo-cd-stack/readme.md): Stack of Argo CD components
+- [argo-cd-stack](argo-cd-stack/readme.md): Stack of Argo CD components
