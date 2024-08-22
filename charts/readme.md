@@ -1,5 +1,7 @@
 # jyje/helm-charts
 
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/jyje)](https://artifacthub.io/packages/search?repo=jyje)
+
 ## Helm Charts by jyje
 
 This repository contains useful Helm Charts for Kubernetes curated by jyje.
