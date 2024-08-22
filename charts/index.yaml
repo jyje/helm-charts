@@ -3,7 +3,40 @@ entries:
   argo-cd-stack:
   - apiVersion: v2
     appVersion: v2.11.0
-    created: "2024-05-19T02:13:13.593604508+09:00"
+    created: "2024-08-22T17:54:01.403948+09:00"
+    dependencies:
+    - condition: argo-cd.enabled
+      name: argo-cd
+      repository: https://argoproj.github.io/argo-helm
+      version: 7.4.4
+    - condition: argocd-apps.enabled
+      name: argocd-apps
+      repository: https://argoproj.github.io/argo-helm
+      version: 2.0.0
+    - condition: argocd-image-updater.enabled
+      name: argocd-image-updater
+      repository: https://argoproj.github.io/argo-helm
+      version: 0.11.0
+    description: A Helm chart for Argo CD stack
+    digest: 7d2e4df17f3bd953f69a511780f7e1e83144776a0eb69ac348a22f41952aad4b
+    home: https://jyje.github.io/helm-charts
+    icon: https://argo-cd.readthedocs.io/en/stable/assets/logo.png
+    kubeVersion: ^1.25.0-0
+    maintainers:
+    - email: jyjeon@outlook.com
+      name: jyje
+    name: argo-cd-stack
+    sources:
+    - https://github.com/argoproj/argo-cd
+    - https://github.com/argoproj/argo-helm/tree/main/charts/argo-cd
+    - https://github.com/jyje/helm-charts
+    type: application
+    urls:
+    - argo-cd-stack/argo-cd-stack-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: v2.11.0
+    created: "2024-08-22T17:54:01.384923+09:00"
     dependencies:
     - condition: argo-cd.enabled
       name: argo-cd
@@ -34,4 +67,4 @@ entries:
     urls:
     - argo-cd-stack/argo-cd-stack-0.0.1.tgz
     version: 0.0.1
-generated: "2024-05-19T02:13:13.564348378+09:00"
+generated: "2024-08-22T17:54:01.367392+09:00"
