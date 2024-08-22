@@ -12,3 +12,15 @@ helm repo update
 ## Charts
 
 - [argo-cd-stack](argo-cd-stack/readme.md): Stack of Argo CD components
+
+
+## How to update
+
+### Update repository index
+
+At root directory, run:
+```sh
+cd charts
+helm package .
+helm repo index . --merge index.yaml
+```

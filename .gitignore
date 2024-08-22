@@ -1,5 +1,9 @@
+# os
+.DS_Store
+
 # helm
 Chart.lock
+/charts/*/charts
 
 # test
 run.sh
